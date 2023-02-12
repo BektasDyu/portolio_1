@@ -1,0 +1,220 @@
+$-color-beige: #bdae82;
+$-color-black: #000;
+$-font-inter: 'Inter', sans-serif;
+
+@mixin centering() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin space-between() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin md-block() {
+    @media screen and (max-width: 991px) {
+        section {
+            padding-top: 80px;
+        }
+    
+        h1 {
+            font-size: 32px;
+    
+        }
+        .container {
+            padding: 0 60px;
+        }
+    
+        .nav-menu {
+            display: none;
+        }
+    
+        .language {
+            font-size: 20px;
+        }
+                
+        .hero {
+            min-height: auto;
+            max-height: 590px;
+            background-position: -17%;
+            &-wrapper {
+                padding: 100px 0 0 0;
+            }
+            &-title {
+                font-size: 32px;
+                font-weight: 400;
+                margin-bottom: 20px;
+            }
+            &-text {
+                line-height: 24px;
+                margin-bottom: 60px;
+                max-width: 390px;
+            }
+        }
+        .section-header {
+            width: 55%;
+            margin: 0 auto 50px;
+        }
+    
+        .section-title {
+            font-size: 32px;
+            line-height: 40px;
+        }
+    
+        .skills-items {
+            row-gap: 36px;
+            column-gap: 44px;
+        }
+        
+        .skills-item {
+            flex-wrap: wrap;
+            padding: 0 4px;
+            &__title {
+                font-size: 20px;
+            }
+            &__img {
+                margin-bottom: 30px;
+            }
+            &__text {
+                line-height: 22px;
+                padding-bottom: 40px;
+            }
+        }
+    
+        .video-bg {
+            height: 418px;
+            margin: 0 -60px;
+            background-size: 106%;
+            background-position: -2%;
+        }
+    
+        .video-play {
+            height: 65px;
+            
+        }
+        
+        .price-items {
+            gap: 50px;
+            
+        }
+    
+        .price-item {
+            padding: 40px 97px;
+            &__text {
+                padding-bottom: 10px;
+            }
+        }
+    
+    
+        .contact {
+            height: 600px;
+            padding-top: 60px;
+            margin-top: 100px;
+            @include centering();
+            background-position: 50%;
+            &-title {
+                font-size: 32px;
+                @include centering();    
+            }
+        }
+        .form {
+            gap: 0;
+        }
+        
+        
+        .contact-input {
+            width: 100%;
+    
+        }
+    
+        .contact-btn{
+            margin: 20px auto 0;
+        }
+    
+        .media {
+            display: flex;
+        }
+        .footer {
+            margin: 28px 0 60px;
+            &-wrapper {
+                flex-direction: column;
+                gap: 50px;
+            }
+        }
+        .copyright, 
+        .year {
+            font-size: 20px;
+            line-height: 24px;
+    
+        }
+    }
+}
+
+@mixin sm-block() {
+    @media screen and (max-width: 767px) {
+
+        section {
+            padding-top: 60px;
+            &-header {
+                width: 90%;
+                margin: 0 auto 40px;
+            }
+        }
+        .nav-menu {
+            display: none;
+        }
+    
+        .hero {
+            min-height: auto;
+            height: 700px;
+            background-position: center;
+            &-wrapper {
+                padding: 80px 0 0 20px;
+            }
+            &-title {
+                font-size: 30px;
+            }
+            &-text {
+                font-size: 15px;
+            }
+        }
+        .skills-item__img {
+            margin-bottom: 20px;
+        }
+    
+        .portfolio-photo {
+            width: 100%;
+        }
+    
+        .video-bg {
+            max-height: 208px;
+            background-position: 27%;
+        }
+        
+    
+        .price-item {
+            padding: 43px 55px 53px;
+    
+        }
+        
+        .contact {
+            background-position: 19%;
+            &-container, 
+            &-input {
+                width: 100%;
+            }
+        }
+        .media {
+            display: flex;
+            gap: 20px;
+        }
+    
+        .footer-wrapper {
+            flex-direction: column;
+            gap: 20px;
+    
+        }
+    }
+}
